@@ -1,6 +1,6 @@
 import pytest
 
-from ..blog.factories import PostFactory
+from ..factories import PostFactory
 
 
 @pytest.fixture
