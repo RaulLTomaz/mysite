@@ -1,6 +1,17 @@
 import pytest
+import os
+import sys
 
-from ..factories import PostFactory
+# Adiciona o caminho raiz ao sys.path
+sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), "../../")))
+
+# Configura o Django
+os.environ.setdefault("DJANGO_SETTINGS_MODULE", "mysite.settings")
+import django
+django.setup()
+
+# Importações do projeto
+from blog.factories import PostFactory
 
 
 @pytest.fixture
